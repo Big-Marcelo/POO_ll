@@ -1,0 +1,216 @@
+Etapas Modelo Cascata (Sistemas de Pedidos Online)
+
+1. Definição: O sistema deve registrar pedidos contendo informações de um cliente e dos produtos solicitados
+
+2. Análise: Entidades --> Cliente (nome,email), Produto (nome, preço), Pedido (cliente, lista de produtos)
+
+3. Projeto:
+
+Cliente
+- Nome
+- Email
+
+Produto
+- Nome
+- Preco
+
+Pedido
+- Cliente
+- Lista<Produto>
+- ExibirPedido()
+
+4. Implementação:
+
+using System;
+
+class Cliente {
+    public string Nome { get; set; }
+    public string Email { get; set; }
+
+    public Cliente(string nome, string email) {
+        Nome = nome;
+        Email = email;
+    }
+
+    public void ExibirDados() {
+        Console.WriteLine($"Cliente: {Nome} - Email: {Email}");
+    }
+}
+
+class Produto {
+    public string Nome { get; set; }
+    public double Preco { get; set; }
+
+    public Produto(string nome, double preco) {
+        Nome = nome;
+        Preco = preco;
+    }
+
+    public void ExibirDados() {
+        Console.WriteLine($"Produto: {Nome} - Preço: R$ {Preco:F2}");
+    }
+}
+
+class Pedido {
+    public Cliente Cliente { get; set; }
+    public List<Produto> Produtos { get; set; } = new List<Produto>();
+
+    public Pedido(Cliente cliente) {
+        Cliente = cliente;
+    }
+
+    public void AdicionarProduto(Produto produto) {
+        Produtos.Add(produto);
+    }
+
+    public void ExibirPedido() {
+        Cliente.ExibirDados();
+        Console.WriteLine("Produtos do Pedido:");
+        foreach (var produto in Produtos) {
+            produto.ExibirDados();
+        }
+    }
+}
+
+5. Testes:
+
+class Program {
+    static void Main(string[] args) {
+        Cliente cliente1 = new Cliente("Sushi", "sushi@email.com");
+        Produto p1 = new Produto("Notebook", 3500.00);
+        Produto p2 = new Produto("Mouse", 80.00);
+
+        Pedido pedido1 = new Pedido(cliente1);
+        pedido1.AdicionarProduto(p1);
+        pedido1.AdicionarProduto(p2);
+
+        pedido1.ExibirPedido();
+    }
+}
+
+
+Etapas Modelo Incremental (Sistema de Loja Virtual com Carrinho)
+
+1. Primeiro incremento:
+
+* Criar classe Produto (nome, preço)
+* Criar classe Carrinho que adiciona produtos e exibe lista
+
+1.1 Implementação
+
+class Produto {
+    public string Nome { get; set; }
+    public double Preco { get; set; }
+
+    public Produto(string nome, double preco) {
+        Nome = nome;
+        Preco = preco;
+    }
+
+    public void Exibir() {
+        Console.WriteLine($"{Nome} - R$ {Preco:F2}");
+    }
+}
+
+class Carrinho
+{
+    public List<Produto> Produtos { get; set; } = new List<Produto>();
+
+    public void AdicionarProduto(Produto produto)
+    {
+        Produtos.Add(produto);
+    }
+
+    public void ExibirCarrinho()
+    {
+        Console.WriteLine("Carrinho de Compras:");
+        foreach (var produto in Produtos)
+        {
+            produto.Exibir();
+        }
+    }
+}
+
+1.2 Teste
+
+class Program {
+    static void Main(string[] args) {
+        Produto p1 = new Produto("Camisa", 120.00);
+        Produto p2 = new Produto("Tênis", 250.00);
+
+        Carrinho carrinho = new Carrinho();
+        carrinho.AdicionarProduto(p1);
+        carrinho.AdicionarProduto(p2);
+
+        carrinho.ExibirCarrinho();
+    }
+}
+
+2. Segundo incremento:
+
+* Adicionar cálculo do total do carrinho
+* Incluir forma de pagamento
+
+2.1 Implementação
+
+using System;
+
+class Produto {
+    public string Nome { get; set; }
+    public double Preco { get; set; }
+
+    public Produto(string nome, double preco) {
+        Nome = nome;
+        Preco = preco;
+    }
+
+    public void Exibir() {
+        Console.WriteLine($"{Nome} - R$ {Preco:F2}");
+    }
+}
+
+class Carrinho {
+    public List<Produto> Produtos { get; set; } = new List<Produto>();
+    public string FormaPagamento { get; set; }
+
+    public void AdicionarProduto(Produto produto) {
+        Produtos.Add(produto);
+    }
+
+    public double CalcularTotal() {
+        double total = 0;
+        foreach (var produto in Produtos) {
+            total += produto.Preco;
+        }
+        return total;
+    }
+
+    public void DefinirFormaPagamento(string forma) {
+        FormaPagamento = forma;
+    }
+
+    public void ExibirCarrinho() {
+        Console.WriteLine("Carrinho de Compras:");
+        foreach (var produto in Produtos) {
+            produto.Exibir();
+        }
+        Console.WriteLine($"Total: R$ {CalcularTotal():F2}");
+        Console.WriteLine($"Forma de pagamento: {FormaPagamento}");
+    }
+}
+
+2.2 Teste
+
+class Program {
+    static void Main(string[] args) {
+        Produto p1 = new Produto("Camisa", 120.00);
+        Produto p2 = new Produto("Tênis", 250.00);
+
+        Carrinho carrinho = new Carrinho();
+        carrinho.AdicionarProduto(p1);
+        carrinho.AdicionarProduto(p2);
+
+        carrinho.DefinirFormaPagamento("Cartão de Crédito");
+        carrinho.ExibirCarrinho();
+    }
+}
