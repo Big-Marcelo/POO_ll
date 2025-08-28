@@ -1,0 +1,11 @@
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\bin\Debug\net8.0\BibliotecaEstatistica.deps.json
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\bin\Debug\net8.0\BibliotecaEstatistica.dll
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\bin\Debug\net8.0\BibliotecaEstatistica.pdb
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.AssemblyInfoInputs.cache
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.AssemblyInfo.cs
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.csproj.CoreCompileInputs.cache
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.dll
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\refint\BibliotecaEstatistica.dll
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\BibliotecaEstatistica.pdb
+C:\Users\FMS\source\repos\BibliotecaEstatistica\BibliotecaEstatistica\obj\Debug\net8.0\ref\BibliotecaEstatistica.dll
