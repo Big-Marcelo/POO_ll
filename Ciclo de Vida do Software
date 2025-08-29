@@ -1,0 +1,46 @@
+Exercícios de Ciclo de Vida do Software
+
+Modelo em V
+1. Em um projeto de sistema bancário, explique como você aplicaria os planos de teste já na fase de análise de requisitos, antes mesmo da codificação.
+
+No desenvolvimento de um um sistema bancário utilizando o Modelo em V, a fase de análise de requisitos estaria diretamente ligada à fase de testes de aceitação.
+Durante a análise de requisitos, a equipe não se limita a apenas documentar as funcionalidades que o sistema deve ter.
+Em paralelo, seriam criados os planos para o teste de aceitação, que validariam esses mesmos requisitos posteriomente.
+Cada requisito funcional e não funcional levantado geraria um caso de teste específico para a validação pelo cliente ao final do processo. Essa abordagem garante que os testes estejam alinhados com as expectativas do cliente e com os objetivos do negócio desde o início do projeto.
+
+2. Imagine que um bug crítico foi detectado no teste de aceitação. Qual fase do lado esquerdo do “V” precisaria ser revisitada e por quê?
+
+No modelo em V, o lado esquerdo representa as fases de definição e planejamento, e o lado direito, os testes e validação.
+Se um bug crítico é detectado no teste de aceitação, a fase que precisa ser revisitada no lado esquerdo é a Especificação de Requisitos (ou Requisitos do Sistema).
+Porque o teste de aceitação verifica se o sistema atende aos requisitos do cliente. Se há um erro crítico nessa fase, isso indica que:
+O requisito pode ter sido mal compreendido, foi mal documentado, ou houve um desalinhamento entre o que o cliente queria e o que foi implementado.
+Assim, é essencial revisar os requisitos funcionais e não funcionais, para garantir que estão claros, completos e corretos, antes de corrigir o erro e seguir com os testes novamente.
+
+
+Modelo Evolutivo
+1. Um cliente pede um sistema de agendamento, mas não sabe exatamente quais funcionalidades precisa. Como você conduziria as primeiras versões evolutivas até chegar a um produto final satisfatório?
+
+A cabordagem é usar prototipação e entregas incrementais. Um possível caminho seria:
+
+Etapa 1 – Entrevistas e brainstorming: Converse com o cliente para entender o problema principal que ele quer resolver com o sistema.
+Etapa 2 – Protótipo simples: Crie uma primeira versão com as funcionalidades mais básicas (por exemplo: criar agendamento, visualizar agenda).
+Etapa 3 – Feedback do cliente: Entregue rapidamente e colete feedback. Pergunte o que está faltando, o que pode ser melhorado.
+Etapa 4 – Evolução contínua: A cada nova entrega, incorpore melhorias e funcionalidades sugeridas pelo cliente, validando sempre com ele.
+Etapa 5 – Refinamento: Com o tempo, os requisitos vão se consolidando, e o sistema evolui até atingir um produto estável e satisfatório.
+
+
+2. Quais seriam os maiores riscos se o cliente continuasse pedindo mudanças a cada entrega? Como você colocaria limites claros no processo?
+
+Riscos principais:
+
+Escopo infinito (scope creep): O projeto nunca termina porque o cliente continua adicionando funcionalidades.
+Aumento de custo e tempo: O orçamento inicial pode estourar.
+Perda de foco: O sistema pode ficar inchado com funcionalidades pouco úteis.
+Impacto na qualidade: Mudanças constantes podem comprometer a estabilidade do software.
+
+Como colocar limites claros:
+
+Estabelecer um escopo mínimo viável (MVP): Defina, junto com o cliente, um conjunto básico de funcionalidades que precisa estar pronto para a primeira versão oficial.
+Planejamento por iterações: Trabalhe com ciclos curtos (sprints) e aceite mudanças apenas nas próximas iterações, não nas em andamento.
+Contratos ou acordos de mudança: Formalize que mudanças fora do escopo terão impacto no custo e prazo.
+Priorizar funcionalidades: Use ferramentas como backlog e MoSCoW (Must, Should, Could, Won’t) para ajudar o cliente a escolher o que realmente importa.
