@@ -9,3 +9,28 @@ Esta é uma DLL simples para realizar cálculos estatísticos básicos.
 2.  **Importe o Namespace:** Adicione `using BibliotecaEstatistica;` no início do seu arquivo de código.
 
 3.  **Use as Classes:** Crie uma instância da classe `Calculos` e chame os métodos disponíveis.
+
+
+using System.Linq;
+
+namespace BibliotecaEstatistica
+{
+    public class Calculos
+    {
+        // Calcula a média de uma lista de números
+        public double CalcularMedia(double[] numeros)
+        {
+            if (numeros == null || numeros.Length == 0)
+                return 0;
+            return numeros.Average();
+        }
+
+        // Calcula a soma de uma lista de números
+        public double CalcularSoma(double[] numeros)
+        {
+            if (numeros == null)
+                return 0;
+            return numeros.Sum();
+        }
+    }
+}
