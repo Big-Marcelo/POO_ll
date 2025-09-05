@@ -1,0 +1,137 @@
+Modelo RAD
+1. Uma startup precisa lançar em 90 dias um aplicativo pioneiro de delivery de farmácia. Quais práticas do RAD ajudariam a cumprir esse prazo apertado?
+
+O modelo RAD é ideal para projetos com prazos curtos, pois foca na rapidez de entrega com prototipação contínua e feedback rápido. As principais práticas do RAD que ajudariam nessa situação são:
+
+Prototipação Rápida e Iterativa: Em vez de desenvolver o sistema completo de uma vez, o RAD permite criar protótipos funcionais rapidamente, testá-los com usuários e evoluí-los conforme o feedback.
+Desenvolvimento em Componentes: O app pode ser dividido em módulos (ex: cadastro, busca de remédios, pagamentos, entregas). Cada um pode ser desenvolvido separadamente e integrado depois.
+Envolvimento Contínuo do Cliente/Usuário Final: Isso garante que o app atenda às necessidades reais desde o início, evitando retrabalho e ganhando agilidade.
+Uso de Ferramentas Visuais e Frameworks de Alta Produtividade: Ferramentas de desenvolvimento rápido (ex: Flutter, Firebase, etc.) permitem criar interfaces e funcionalidades com muito mais velocidade.
+Testes Simultâneos ao Desenvolvimento: A verificação e validação são contínuas, acelerando o processo de correção de falhas e garantindo que o produto esteja pronto mais cedo.
+
+2. Em um time grande, como você dividiria as tarefas para aproveitar o paralelismo do RAD sem comprometer a qualidade do software?
+
+Para aproveitar o paralelismo do RAD sem perder qualidade, é fundamental uma boa divisão de tarefas e comunicação. Algumas estratégias:
+
+Dividir por Módulos Funcionais:
+
+Time 1: Autenticação e Cadastro
+Time 2: Busca e visualização de medicamentos
+Time 3: Pagamento e pedidos
+Time 4: Logística e rastreamento de entrega
+
+Times Multidisciplinares e Autônomos: Cada equipe deve ter desenvolvedores, testers e, se possível, um representante do usuário/cliente para feedback constante.
+Integração Contínua (CI): Automatizar a integração entre os módulos evita problemas de compatibilidade e mantém o sistema sempre testável.
+Gestão com Iterações Curtas (Time-boxed): Ciclos curtos de 1 a 2 semanas permitem acompanhar o progresso e corrigir desvios rapidamente.
+Padrões de Codificação e Repositório Compartilhado: Mantêm a qualidade do código mesmo com várias pessoas trabalhando em paralelo.
+Feedback Contínuo e Revisões de Código: Garantem qualidade e aderência às necessidades do negócio durante todo o processo.
+
+
+Prototipagem
+1. Durante a prototipagem de um sistema de gerenciamento escolar, você entrega um protótipo não operacional de telas de matrícula. Como garantir que o cliente entenda que esse protótipo não é a versão final?
+
+Para garantir que o cliente entenda que o protótipo não é a versão final, é essencial fazer uma comunicação clara e direta. Algumas ações importantes incluem:
+
+Explicar previamente que o protótipo é apenas um modelo visual ou funcional limitado, usado para facilitar o entendimento e a coleta de feedback.
+Ressaltar que ele não possui funcionalidades completas, não acessa banco de dados, e que os dados e respostas são simulados.
+Informar que sua função principal é ajudar a esclarecer requisitos, demonstrar layout, fluxo de navegação e permitir que o cliente veja como o sistema pode funcionar, mas não é algo funcional ou definitivo.
+Utilizar rótulos visuais claros nas telas como: “Protótipo – Modelo Não Operacional”.
+Registrar em documentação de reunião ou termo de entrega que se trata de um protótipo não operacional, deixando claro o propósito e as limitações.
+Evitar prometer desempenho ou funções com base nesse protótipo, para não gerar falsas expectativas.
+
+2. Cite um exemplo de protótipo descartável e um de protótipo reaproveitável para esse mesmo sistema escolar.
+
+Exemplo de protótipo descartável:
+
+Um conjunto de telas estáticas feitas em PowerPoint ou em uma ferramenta de prototipação rápida (como Figma ou Balsamiq), mostrando como seria o fluxo da matrícula (cadastro do aluno, escolha das disciplinas, confirmação da matrícula), sem nenhuma funcionalidade real.
+Esse protótipo é feito apenas para validar com o cliente o design, a organização das informações e o fluxo das ações, sendo descartado após o feedback.
+
+Exemplo de protótipo reaproveitável:
+
+Um protótipo funcional desenvolvido com um framework leve (como Angular, React, ou Flutter) que simula a matrícula com funcionalidades parciais, já com uma base de código estruturada e planejada para evolução.
+Após validação, esse protótipo pode ser expandido e refinado, reaproveitando-se partes do código, como componentes de interface, validações de formulário e estrutura de navegação, até chegar na versão final operacional.
+
+
+Modelo Espiral
+1. Em um projeto de sistema de controle de tráfego aéreo (altíssimo risco), descreva como você usaria a análise de riscos em cada volta da espiral.
+
+O Modelo Espiral é iterativo, e cada volta (ou ciclo) inclui uma análise sistemática de riscos, o que o torna ideal para projetos críticos. Em um sistema de controle de tráfego aéreo, onde erros podem causar perda de vidas, a análise de riscos é essencial em todas as fases.
+
+Fase 1: Definição de objetivos e alternativas
+Exemplo: Avaliar diferentes abordagens de comunicação entre torre e aeronaves (e.g., via satélite vs. VHF).
+Risco identificado: Interferência ou perda de sinal em condições climáticas adversas.
+
+Fase 2: Avaliação e redução de riscos
+Ações: Simulações de perda de comunicação; testes com protótipos de rádios.
+Mitigação: Implementar redundância (comunicação alternativa automática).
+
+Fase 3: Desenvolvimento e verificação
+Risco: Bugs críticos no software de monitoramento em tempo real.
+Ação: Aplicar verificação formal de código; criar protótipos testáveis antes da implementação final.
+
+Fase 4: Planejamento da próxima iteração
+Risco: Escopo fora de controle devido à complexidade.
+Mitigação: Planejamento incremental com foco nas funcionalidades mais críticas primeiro (ex: alerta de colisão).
+
+2. Dê um exemplo de requisito que poderia ser validado com protótipos no modelo espiral antes de comprometer todo o orçamento.
+Exemplo de Requisito Validável com Protótipo:
+
+"O sistema deve permitir ao controlador visualizar em tempo real a posição de todas as aeronaves em um raio de 200 km com atualização mínima a cada 2 segundos."
+
+Como validar com protótipo: Criar um protótipo de interface gráfica que simule o radar com dados fictícios de aeronaves.
+
+Realizar testes com controladores reais para: 
+
+Avaliar usabilidade (legibilidade, tempo de resposta).
+Verificar se a atualização a cada 2 segundos é suficiente.
+Identificar cargas cognitivas ou confusão visual.
+
+Benefício: Evita o desperdício de recursos em uma interface ineficaz, permitindo ajustes antes do desenvolvimento completo — crucial em projetos com orçamento elevado e tolerância zero a falhas.
+
+
+Modelo RUP
+1. Em um projeto corporativo, como o uso de templates e frameworks do RUP ajuda a evitar falhas no processo?
+O uso de templates e frameworks do RUP ajuda a evitar falhas de várias maneiras:
+
+Padronização e consistência
+Templates garantem que todos os artefatos (ex.: casos de uso, diagramas, documentos de requisitos) sigam um formato padrão, facilitando a leitura, validação e manutenção por diferentes membros da equipe ao longo do projeto.
+
+Redução de erros por omissão
+Frameworks e templates geralmente incluem checklists e seções obrigatórias que ajudam a garantir que nenhum item importante seja esquecido, como requisitos críticos ou validações.
+
+Reaproveitamento e eficiência
+Ao utilizar modelos prontos, a equipe economiza tempo e esforço na criação de documentos e artefatos, focando mais na qualidade do conteúdo do que na forma.
+
+Facilidade de comunicação entre equipes
+A padronização dos artefatos melhora a comunicação entre desenvolvedores, analistas, gerentes de projeto e clientes, diminuindo ruídos e falhas de interpretação.
+
+Apoio à governança e auditoria
+Em ambientes corporativos, o uso de templates facilita o acompanhamento por áreas de governança, controle de qualidade e auditoria, promovendo rastreabilidade e conformidade com normas internas e externas.
+
+2. Imagine que você está na fase de elaboração. Que riscos você priorizaria identificar antes de seguir para a fase de construção?
+
+Durante a fase de elaboração do RUP, o foco está em estabilizar a arquitetura, entender os requisitos mais críticos e reduzir os riscos técnicos e de negócio. Os principais riscos a priorizar incluem:
+
+Riscos técnicos
+Tecnologias novas ou não testadas: Há viabilidade técnica no uso das tecnologias escolhidas? A equipe tem domínio sobre elas?
+Desempenho e escalabilidade: A arquitetura proposta suporta o volume de dados e usuários esperados?
+Integração com sistemas legados: Existem desafios na comunicação com sistemas já existentes?
+
+Riscos de requisitos mal definidos ou instáveis
+Requisitos estão claros, compreendidos e priorizados?
+Existem partes do sistema com requisitos ainda vagos ou sujeitos a muitas mudanças?
+
+Riscos de cronograma e orçamento
+O esforço estimado para as próximas fases está realista?
+Há recursos humanos e financeiros disponíveis para sustentar o plano?
+
+Riscos organizacionais e de equipe
+A equipe tem as competências necessárias?
+Há problemas de comunicação, conflitos ou falta de engajamento?
+
+Riscos de segurança e compliance
+Existem preocupações com privacidade, segurança de dados ou conformidade regulatória que precisam ser mapeadas desde cedo?
+
+Riscos de negócio
+O sistema realmente atende às necessidades do negócio?
+Há viabilidade econômica e retorno sobre o investimento esperado?
