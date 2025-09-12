@@ -1,0 +1,14 @@
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\bin\Debug\net8.0\TesteExcecoesPersonalizadas.exe
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\bin\Debug\net8.0\TesteExcecoesPersonalizadas.deps.json
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\bin\Debug\net8.0\TesteExcecoesPersonalizadas.runtimeconfig.json
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\bin\Debug\net8.0\TesteExcecoesPersonalizadas.dll
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\bin\Debug\net8.0\TesteExcecoesPersonalizadas.pdb
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.AssemblyInfoInputs.cache
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.AssemblyInfo.cs
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.csproj.CoreCompileInputs.cache
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.dll
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\refint\TesteExcecoesPersonalizadas.dll
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.pdb
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\TesteExcecoesPersonalizadas.genruntimeconfig.cache
+C:\Users\alunolab\source\repos\TesteExcecoesPersonalizadas\TesteExcecoesPersonalizadas\obj\Debug\net8.0\ref\TesteExcecoesPersonalizadas.dll

@@ -1,0 +1,14 @@
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\bin\Debug\net8.0\TesteDivisaoPorZero.exe
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\bin\Debug\net8.0\TesteDivisaoPorZero.deps.json
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\bin\Debug\net8.0\TesteDivisaoPorZero.runtimeconfig.json
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\bin\Debug\net8.0\TesteDivisaoPorZero.dll
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\bin\Debug\net8.0\TesteDivisaoPorZero.pdb
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.AssemblyInfoInputs.cache
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.AssemblyInfo.cs
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.csproj.CoreCompileInputs.cache
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.dll
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\refint\TesteDivisaoPorZero.dll
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.pdb
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\TesteDivisaoPorZero.genruntimeconfig.cache
+C:\Users\alunolab\Desktop\TBL_ll\TesteDivisaoPorZero\TesteDivisaoPorZero\obj\Debug\net8.0\ref\TesteDivisaoPorZero.dll
