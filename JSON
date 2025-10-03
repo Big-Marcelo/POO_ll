@@ -1,0 +1,155 @@
+1. Serialização Simples
+Crie uma classe Livro com Titulo, Autor e Ano. Crie um objeto e converta para JSON.
+
+using Newtonsoft.Json;
+using System;
+
+class Livro
+{
+    public string Titulo { get; set; }
+    public string Autor { get; set; }
+    public int Ano { get; set; }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Livro livro = new Livro
+        {
+            Titulo = "O Corvo",
+            Autor = "Edgar Allan Poe",
+            Ano = 1845
+        };
+
+        string json = JsonConvert.SerializeObject(livro, Formatting.Indented);
+        Console.WriteLine("JSON gerado:\n" + json);
+    }
+}
+
+2. Desserialização de Arquivo
+Crie um arquivo aluno.json com dados de um aluno e leia no programa para exibir no console.
+
+JSON
+{
+  "Nome": "João Silva",
+  "Idade": 20,
+  "Curso": "Sistema de Informação"
+}
+
+
+using Newtonsoft.Json;
+using System;
+using System.IO;
+
+class Aluno
+{
+    public string Nome { get; set; }
+    public int Idade { get; set; }
+    public string Curso { get; set; }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string caminho = "aluno.json";
+        if (File.Exists(caminho))
+        {
+            string json = File.ReadAllText(caminho);
+            Aluno aluno = JsonConvert.DeserializeObject<Aluno>(json);
+
+            Console.WriteLine($"Nome: {aluno.Nome}");
+            Console.WriteLine($"Idade: {aluno.Idade}");
+            Console.WriteLine($"Curso: {aluno.Curso}");
+        }
+        else
+        {
+            Console.WriteLine("Arquivo aluno.json não encontrado.");
+        }
+    }
+}
+
+
+3. Lista de Objetos
+Crie uma lista de Carro (Marca, Modelo, Ano) e grave em um arquivo JSON. Depois leia novamente e exiba os dados.
+
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Carro
+{
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+    public int Ano { get; set; }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string caminho = "carros.json";
+
+        List<Carro> listaCarros = new List<Carro>
+        {
+            new Carro { Marca = "Toyota", Modelo = "Corolla", Ano = 2020 },
+            new Carro { Marca = "Ford", Modelo = "Fiesta", Ano = 2018 },
+            new Carro { Marca = "Chevrolet", Modelo = "Onix", Ano = 2021 }
+        };
+
+        string json = JsonConvert.SerializeObject(listaCarros, Formatting.Indented);
+        File.WriteAllText(caminho, json);
+        Console.WriteLine("Arquivo carros.json salvo com sucesso.\n");
+
+        string jsonLido = File.ReadAllText(caminho);
+        List<Carro> carrosLidos = JsonConvert.DeserializeObject<List<Carro>>(jsonLido);
+
+        foreach (var carro in carrosLidos)
+        {
+            Console.WriteLine($"{carro.Marca} - {carro.Modelo} ({carro.Ano})");
+        }
+    }
+}
+
+
+4. Uso de JObject
+Receba um JSON de configuração com valores de conexão (Servidor, Porta, Usuario) e altere a Porta.
+
+{
+  "Servidor": "localhost",
+  "Porta": 5432,
+  "Usuario": "admin"
+}
+
+using Newtonsoft.Json.Linq;
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string caminho = "config.json";
+
+        if (File.Exists(caminho))
+        {
+            string json = File.ReadAllText(caminho);
+
+            JObject config = JObject.Parse(json);
+            Console.WriteLine("Porta original: " + config["Porta"]);
+
+
+            config["Porta"] = 3306;
+
+            File.WriteAllText(caminho, config.ToString());
+
+            Console.WriteLine("Nova porta: " + config["Porta"]);
+        }
+        else
+        {
+            Console.WriteLine("Arquivo config.json não encontrado.");
+        }
+    }
+}
