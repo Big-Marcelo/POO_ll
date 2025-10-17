@@ -1,0 +1,136 @@
+Exercício 1 – Básico: Ler XML simples
+Objetivo: Ler um arquivo XML e exibir informações básicas.
+Conceito: Leitura de nós e atributos usando XDocument.
+
+Dado o arquivo alunos.xml:
+<alunos>
+ <aluno>
+ <nome>Maria</nome>
+ <curso>Sistemas de Informação</curso>
+ </aluno>
+ <aluno>
+ <nome>João</nome>
+ <curso>Engenharia de Software</curso>
+ </aluno>
+</alunos>
+
+Escreva um código em C# que:
+1. Carregue o XML acima.
+2. Exiba no console o nome e o curso de cada aluno.
+
+using System;
+using System.Xml.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        XDocument doc = XDocument.Load("alunos.xml");
+
+        foreach (var aluno in doc.Descendants("aluno"))
+        {
+            string nome = aluno.Element("nome")?.Value;
+            string curso = aluno.Element("curso")?.Value;
+
+            Console.WriteLine($"Nome: {nome}");
+            Console.WriteLine($"Curso: {curso}");
+            Console.WriteLine();
+        }
+    }
+}
+
+
+Exercício 2 – Intermediário: Criar e salvar XML
+Objetivo: Criar um documento XML a partir de objetos C#.
+Conceito: Serialização XML com XmlSerializer.
+
+Crie uma classe Produto com:
+public class Produto
+{
+ public string Nome { get; set; }
+ public double Preco { get; set; }
+}
+1. Crie uma lista com 3 produtos.
+2. Grave esses dados em um arquivo produtos.xml usando XmlSerializer.
+3. Mostre no console o conteúdo gerado.
+
+using System;
+using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
+
+public class Produto
+{
+    public string Nome { get; set; }
+    public double Preco { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        List<Produto> produtos = new List<Produto>
+        {
+            new Produto { Nome = "Teclado", Preco = 150.00 },
+            new Produto { Nome = "Mouse", Preco = 90.00 },
+            new Produto { Nome = "Monitor", Preco = 1200.50 }
+        };
+
+        XmlSerializer serializer = new XmlSerializer(typeof(List<Produto>));
+
+        using (StreamWriter writer = new StreamWriter("produtos.xml"))
+        {
+            serializer.Serialize(writer, produtos);
+        }
+
+         string xmlContent = File.ReadAllText("produtos.xml");
+        Console.WriteLine(xmlContent);
+    }
+}
+
+
+Exercício 3 – Intermediário 2: Modificar XML existente
+Objetivo: Editar dados em um arquivo XML existente.
+Conceito: Atualização de nós XML com XDocument.
+
+Usando o XML abaixo:
+<estoque>
+ <item>
+ <nome>Teclado</nome>
+ <quantidade>5</quantidade>
+ </item>
+ <item>
+ <nome>Mouse</nome>
+ <quantidade>3</quantidade>
+ </item>
+</estoque>
+
+1. Leia o arquivo e encontre o item com <nome>Mouse</nome>.
+2. Atualize a quantidade para 10.
+3. Salve o XML novamente com as alterações.
+
+using System;
+using System.Xml.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        XDocument doc = XDocument.Load("estoque.xml");
+
+        var mouse = doc.Descendants("item")
+                       .FirstOrDefault(i => i.Element("nome")?.Value == "Mouse");
+
+        if (mouse != null)
+        {
+            mouse.Element("quantidade").Value = "10";
+            doc.Save("estoque.xml");
+            Console.WriteLine("Quantidade atualizada para Mouse.");
+        }
+        else
+        {
+            Console.WriteLine("Item Mouse não encontrado.");
+        }
+    }
+}
+
